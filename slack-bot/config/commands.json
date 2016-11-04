@@ -1,0 +1,8 @@
+{
+    "export": {
+        "alias": ["e"],
+        "endpoint": "#",
+        "help": "help [command](optional)",
+        "description": "To get user's information"
+    }
+}
