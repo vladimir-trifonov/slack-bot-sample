@@ -2,11 +2,11 @@
 
 #### Slack bot
 ##### `> cd slack-bot`
-##### `> node .`
+##### `> LOGIN_TOKEN=xxx node .`
 
 #### Slack's user info receiver
 ##### `> cd user-receiver`
-##### `> SLACK_TOKEN={token} node .`
+##### `> SLACK_TOKEN=yyy USERS_MS=zzz node .`
 
 #### In slack:
 ##### `> /msg @{botName} export @{username}`

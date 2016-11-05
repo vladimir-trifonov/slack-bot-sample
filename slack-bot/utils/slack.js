@@ -13,8 +13,9 @@ var getUserInfo = function (username, cb) {
 };
 
 // Post message in slack's channel'
-var postMessage = function (channel, response) {
-	response = '```' + response + '```';
+var postMessage = function (channel, response, format) {
+	format = typeof format !== 'undefined' ? format : true;
+	response = (format && '```' + response + '```') || response;
 
 	webClient.chat.postMessage(channel, response, {
 		as_user: true

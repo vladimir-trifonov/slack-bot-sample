@@ -21,7 +21,7 @@ module.exports = function (param) {
     slackUtils.getUserInfo(usernameParsed, function (user) {
         // Send the user's information(name, email) to another microservice
         requestUtils.notifyHost({
-            url: 'http://localhost:7000/api/users',
+            url: process.env.USERS_MS + '/api/users',
             data: {
                 user: user.real_name,
                 email: user.profile.email
@@ -35,7 +35,7 @@ module.exports = function (param) {
 
             setImmediate(function () {
                 // Post a message in slack that the operation has succeeded
-                slackUtils.postMessage(param.channel, 'The user: {name: ' + user.real_name + ', email: ' + user.profile.email + '} was exported!');
+                slackUtils.postMessage(param.channel, 'The user: `' + user.real_name + '` was exported!', false);
             });
         });
     });

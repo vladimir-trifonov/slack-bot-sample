@@ -4,5 +4,8 @@
         "endpoint": "#",
         "help": "help [command](optional)",
         "description": "To get user's information"
-    }
+    },
+    "error": {
+		"exclude": true
+	}
 }

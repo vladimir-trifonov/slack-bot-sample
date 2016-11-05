@@ -6,5 +6,8 @@
   "dependencies": {
     "request": "^2.78.0",
     "slack-terminalize": "^1.0.2"
+  },
+  "scripts": {
+    "start": "SLACK_TOKEN=yyy USERS_MS=zzz node ."
   }
 }

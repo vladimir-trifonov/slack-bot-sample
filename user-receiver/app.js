@@ -1,14 +1,12 @@
-var bodyParser =require('body-parser');
-var express = require('express');
-var app = express();
+var app = require('express')();
+var server = require('http').Server(app);
 
-app.use(bodyParser.json());
+var io = require('socket.io')(server);
 
-app.post('/api/users', function(req, res) {
-	console.dir(req.body);
-	res.sendStatus(200);
-});
+var usersService = require('./server/services/users');
+require('./server/configs/socket')(io, usersService);
 
-app.listen(7000, function() {
-	console.log('Server listens on port 7000!');
-});
+require('./server/configs/express')(app);
+require('./server/configs/routes')(app);
+
+server.listen();
