@@ -6,7 +6,7 @@
 
 #### Slack's user info receiver
 ##### `> cd user-receiver`
-##### `> SLACK_TOKEN=yyy USERS_MS=zzz node .`
+##### `> SLACK_TOKEN=yyy USERS_MS_URL=zzz node .`
 
 #### In slack:
 ##### `> /msg @{botName} export @{username}`

@@ -8,6 +8,6 @@
     "slack-terminalize": "^1.0.2"
   },
   "scripts": {
-    "start": "SLACK_TOKEN=yyy USERS_MS=zzz node ."
+    "start": "SLACK_TOKEN=yyy USERS_MS_URL=zzz node ."
   }
 }

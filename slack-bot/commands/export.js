@@ -21,7 +21,7 @@ module.exports = function (param) {
     slackUtils.getUserInfo(usernameParsed, function (user) {
         // Send the user's information(name, email) to another microservice
         requestUtils.notifyHost({
-            url: process.env.USERS_MS + '/api/users',
+            url: process.env.USERS_MS_URL + '/api/users',
             data: {
                 user: user.real_name,
                 email: user.profile.email
