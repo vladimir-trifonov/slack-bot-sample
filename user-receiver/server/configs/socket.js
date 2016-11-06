@@ -1,4 +1,4 @@
-var usersService = require('./server/services/users');
+var usersService = require('../services/users');
 
 module.exports = function (io) {
     io.on('connection', function(socket) {
