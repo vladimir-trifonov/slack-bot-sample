@@ -9,6 +9,6 @@
     "socket.io": "^1.5.1"
   },
   "scripts": {
-    "start": "LOGIN_TOKEN=xl4m2f node app.js"
+    "start": "LOGIN_TOKEN=xxx node app.js"
   }
 }
